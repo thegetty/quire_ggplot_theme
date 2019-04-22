@@ -45,7 +45,7 @@ A bit more involved than clicking one link. To do this:
 
 2. Install RStudio Desktop (the FREE open source version): https://www.rstudio.com/products/rstudio/download/
 
-3. Download the workshop code at https://github.com/thegetty/quire_pplot_theme
+3. Download the plot code at https://github.com/thegetty/quire_pplot_theme
 
 3. Install required R packages one time by running the code in the `setup.R` file in the base directory.
 
