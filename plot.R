@@ -19,6 +19,7 @@ ggplot(french_proportions, aes(x = lot_sale_year, y = value, fill = category)) +
   # ^ the code above defines the data and geometries
   # the code below will adjust the theme
   theme(
+    text = element_text(family = "Lato"),
     axis.text.x = element_text(angle = 45, hjust = 1), 
     panel.background = element_rect(fill = "transparent"),
     # Most theme elements are hierarchical. E.G. we can first blank all of the
