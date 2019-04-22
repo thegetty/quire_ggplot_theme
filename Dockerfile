@@ -1,4 +1,4 @@
-FROM mdlincoln/tidy_plotting:f520f25c9570
+FROM f520f25c9570
 
 ## Copies your repo files into the Docker Container
 USER root
