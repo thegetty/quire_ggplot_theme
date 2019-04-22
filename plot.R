@@ -1,7 +1,10 @@
 library(ggplot2)
+library(dplyr)
 library(scales)
 library(ggrepel)
+library(extrafont)
 
+set.seed(100)
 load("data/pi_data.rda")
 
 # Most of the code below defines the aesthethic mapping of data to visual
@@ -88,7 +91,7 @@ ggplot(early_british_preponderances, aes(x = british, y = `not british`)) +
   scale_x_sqrt() +
   scale_y_sqrt() +
   geom_abline(slope = 1, intercept = 0, color = "red") +
-  labs(x = "Disporportionality \"British\"", y = "Disproportionately \"Not British\"") +
+  labs(x = "Disproportionately \"British\"", y = "Disproportionately \"Not British\"") +
   theme(
     legend.position = "off"
   )
