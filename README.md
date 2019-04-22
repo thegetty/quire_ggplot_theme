@@ -7,6 +7,10 @@ A free hosting service to run this code wihtout needing to install locally.
 
 <http://mybinder.org/v2/gh/thegetty/quire_ggplot_theme/master?urlpath=rstudio>
 
+## ggplot2 theme docs
+
+<https://ggplot2.tidyverse.org/reference/theme.html>
+
 ## TODO
 
 - Setup appropriate libraries and sample data
