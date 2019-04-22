@@ -1,4 +1,4 @@
-FROM mdlincoln/quire_plotting
+FROM mdlincoln/quire_plotting:latest
 
 ## Copies your repo files into the Docker Container
 USER root
