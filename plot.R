@@ -58,14 +58,15 @@ term_preponderance_chart <- function(df, terms) {
 
 # Area/line plots
 
-area_theme <- ggedit(ggplot(french_proportions, aes(x = lot_sale_year, y = value, fill = category)) +
+ggplot(french_proportions, aes(x = lot_sale_year, y = value, fill = category)) +
   geom_area() +
   facet_wrap(~category, nrow = 1) +
-  scale_y_continuous(name = "Precentage of lots offered for sale", limits = c(0, 1)) +
-  theme_minimal() +
-  theme(axis.text.x = element_text(angle = 45, hjust = 1), legend.position = "off") +
-  xlab("Decade"))
-
+  scale_y_continuous(limits = c(0, 1)) +
+  labs(x = "Decade", y = "Precentage of lots offered for sale") +
+  theme(
+    axis.text.x = element_text(angle = 45, hjust = 1), 
+    legend.position = "off")
+  
 ggedit(ggplot(language_data, aes(x = starting_year, y = mean)) +
   geom_line() +
   geom_ribbon(aes(ymin = lower_bound, ymax = upper_bound), alpha = 0.5) +
