@@ -1,4 +1,3 @@
-library(dplyr)
 library(ggplot2)
 library(scales)
 library(ggrepel)
@@ -17,8 +16,17 @@ ggplot(french_proportions, aes(x = lot_sale_year, y = value, fill = category)) +
   facet_wrap(~category, nrow = 1) +
   scale_y_continuous(limits = c(0, 1)) +
   labs(x = "Decade", y = "Precentage of lots offered for sale") +
+  # ^ the code above defines the data and geometries
+  # the code below will adjust the theme
   theme(
     axis.text.x = element_text(angle = 45, hjust = 1), 
+    panel.background = element_rect(fill = "transparent"),
+    # Most theme elements are hierarchical. E.G. we can first blank all of the
+    # gridlines...
+    panel.grid = element_line(color = "transparent"),
+    # ... then selectively turn on the y-axis gridlines
+    panel.grid.major.y = element_line(color = "gray90"),
+    panel.grid.minor.y = element_line(color = "gray90"),
     legend.position = "off"
   )
 
